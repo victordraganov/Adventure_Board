@@ -32,7 +32,7 @@ The sentinels are not the only other units on the board. There are nautrals
 with witch the hero can interact. Salesman, craftsman, gamblers and others 
 can make the game a bit more interesting. 
 
-There are places in the game where the hero can regenerate or do 
+There are places in the game where the hero can regenerate. 
 
 The final goal is to kill a very powerfull boss who disturbs the board world. 
 Becoming powerful enough himself, the player will bring peace in the game. 
