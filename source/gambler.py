@@ -1,12 +1,14 @@
 from neutral import Neutral
 
+
 class Gambler(Neutral):
 
     def __init__(self, level, coords):
-        super.__init__(level, coords)
+        Neutral.__init__(self, level, coords)
 
     def gamble_money(self, money):
         pass
+    #   GAMBLER WILL PROPOSE A DICE GAME OF "PIG"(1 OR 2 DICE)
 
     def type(self):
         return "gambler"

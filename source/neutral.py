@@ -1,10 +1,19 @@
-class Neutral(object): # Abstract
+class Neutral:  # Abstract
 
     def __init__(self, level, coords):
-        super.__init__(level, coords)
+        self._level = level
+        self._coords = coords
 
-    def type(self): # Abstract
+    @property
+    def level(self):
+        return self._level
+
+    @property
+    def coords(self):
+        return self._coords
+
+    def type(self):  # Abstract
         pass
 
-    def interact(self): # Abstract
+    def interact(self):  # Abstract
         pass
