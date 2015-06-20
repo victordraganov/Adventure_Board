@@ -1,4 +1,4 @@
-# Adventure_Board
+# adventure-board
 This is the final and biggest project for the course "Programming with Python"
 
 As the title indicates this project represents a board game with an adventurous
