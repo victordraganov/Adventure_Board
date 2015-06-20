@@ -1,6 +1,6 @@
 from neutral import Neutral
 
-
+# If player is lower level than the gambler his luck must be reduced
 class Gambler(Neutral):
 
     def __init__(self, level, coords):

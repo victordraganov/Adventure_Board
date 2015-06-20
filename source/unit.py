@@ -1,17 +1,20 @@
+from board_object import BoardObject
+
 INITIAL_LUCK = 4  # MIN 0 MAX 10
+UNIT_SIZE = (1, 1) # THE INITIAL UNIT SIZE -> 1 FIELD
 
+class Unit(BoardObject):  # Abstract
 
-class Unit:  # Abstract
-
-    def __init__(self, name, health, damage, armor,  level, coords, speed):
+    def __init__(self, name, health, damage, armor,
+                    level, coords, speed, luck):
+        BoardObject.__init__(self, coords, UNIT_SIZE)
         self._name = name
         self._health = health
         self._damage = damage
         self._armor = armor
         self._level = level
-        self._coords = coords
         self._speed = speed
-        self._luck = INITIAL_LUCK
+        self._luck = luck
 
     def type(self):  # Abstract
         pass
@@ -23,10 +26,6 @@ class Unit:  # Abstract
     @property
     def level(self):
         return self._level
-
-    @property
-    def coords(self):
-        return self._coords
 
     @property
     def speed(self):

@@ -4,7 +4,7 @@ class Coords():
         self.x = x
         self.y = y
 
-
+    # def set(self, x, y):
         # if type(x) is not int or type(y) is not int:
         #     raise "Invalid coordinates type!"
         # if x < 0 or y < 0:

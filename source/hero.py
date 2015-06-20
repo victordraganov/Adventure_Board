@@ -3,14 +3,16 @@ from unit import Unit
 
 class Hero(Unit):
 
-    def __init__(self, name, health, damage, armor, level, coords, speed,
-            hero_category):
-        Unit.__init__(self, name, health, damage, armor, level, coords, speed)
+    def __init__(self, name, health, damage, armor, level,
+                    coords, speed, luck, hero_category):
+        Unit.__init__(self, name, health, damage, armor,
+                        level, coords, speed, luck)
         self._energy = 100
         self._hero_category = hero_category
         self.init_attack_type()
         self._experience = 0
         self._skills = []
+        # inventory
 
     @property
     def hero_category(self):
