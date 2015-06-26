@@ -3,12 +3,10 @@ from neutral import Neutral
 
 class Salesman(Neutral):
 
-    def __init__(self, level, coords, inventory):
-        Neutral.__init__(self, level, coords)
+    def __init__(self, name, level, coords, inventory):
+        Neutral.__init__(self, "salesman", level, coords)
         self._inventory = inventory
+        # random inventory depending on level
 
     def sell(self, item):
         pass
-
-    def type(self):
-        return "salesman"

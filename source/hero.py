@@ -3,13 +3,18 @@ from unit import Unit
 
 class Hero(Unit):
 
-    def __init__(self, name, health, damage, armor, level,
-                    coords, speed, luck, hero_category):
-        Unit.__init__(self, name, health, damage, armor,
-                        level, coords, speed, luck)
+    """
+        Represents the player's board figure, which is the tool for playing the 
+        game. 'hero_category' can be assigned as strength, agillity or wisdom. 
+    """
+
+    def __init__(self, name, level, coords, speed, luck, strength,
+                 agillity, wisdom, attack_type, hero_category):
+        Unit.__init__(self, name, level, coords, speed, luck, strength,
+                      agillity, wisdom, attack_type)
+
         self._energy = 100
         self._hero_category = hero_category
-        self.init_attack_type()
         self._experience = 0
         self._skills = []
         # inventory
@@ -29,17 +34,12 @@ class Hero(Unit):
     @property
     def skills(self):
         return self._skills
+
+    def init_characteristics(self):
     
-    
+
     def type(self):
         return "hero"
-
-    # Initializes the hero as a "hitter" or "shooter"
-    def init_attack_type(self):
-        if self.hero_category == "assassin" or self.hero_category == "warior":
-            self._attack_type = "melee"
-        else:
-            self._attack_type = "range"
 
     def gain_exp(self, amount):
         self._experience = self.experience + amount

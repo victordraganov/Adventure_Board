@@ -3,10 +3,14 @@ from unit import Unit
 
 class Sentinel(Unit):  # Abstract
 
-    def __init__(self, name, health, attack, armor,
-                    level, coords, speed, luck):
-        Unit.__init__(self, name, health, attack, armor,
-                        level, coords, speed, luck)
+    def __init__(self, name, level, coords, speed, luck, strength,
+                 agillity, wisdom, attack_type):
+        Unit.__init__(self, name, level, coords, speed, luck, strength,
+                      agillity, wisdom, attack_type)
+
+    def init_characteristics(self):
+        self._damage =
+        self._armor
 
     def type(self):
         return "sentinel"
